@@ -2,11 +2,12 @@ import Footers from '@/components/shared/Footers';
 import Navbar from '@/components/shared/Navbar';
 import React from 'react';
 
-const MainLayout = () => {
+const MainLayout = ({ children }) => {
     return (
         <div>
-            <Navbar/>
-            <Footers/>
+            <Navbar />
+            {children}
+            <Footers />
         </div>
     );
 };

@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "This comprehensive web development bootcamp is designed for beginners who want to become full-stack developers from scratch. You will start with the fundamentals of HTML, CSS, and JavaScript, then gradually move to advanced topics like React, Node.js, Express, and MongoDB. The course focuses heavily on hands-on learning through real-world projects, helping you build a strong portfolio. You will also learn deployment, debugging, and best coding practices. By the end of this course, you will be confident enough to build complete web applications and even start freelancing or applying for developer jobs.",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "Advanced React & Next.js",
+    "instructor": "Sarah Smith",
+    "duration": "18 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Take your frontend skills to the next level with this advanced React and Next.js course. You will dive deep into modern concepts like server-side rendering (SSR), static site generation (SSG), dynamic routing, and API integration. The course also covers performance optimization, authentication systems, and scalable project architecture. Through multiple real-world projects, you will learn how to build fast, SEO-friendly, and production-ready applications. This course is perfect for developers who already know the basics and want to master professional-level React development.",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
+    "category": "Development"
+  },
+  {
+    "id": 3,
+    "title": "Node.js & Express Masterclass",
+    "instructor": "Michael Brown",
+    "duration": "15 hours",
+    "rating": 4.6,
+    "level": "Intermediate",
+    "description": "This masterclass will guide you through building powerful backend systems using Node.js and Express. You will learn how to create RESTful APIs, handle authentication with JWT, manage middleware, and connect your server with databases like MongoDB. The course includes practical projects that simulate real-world backend development scenarios. You will also understand error handling, security best practices, and deployment techniques. By the end, you will be able to design scalable and maintainable backend systems with confidence.",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    "category": "Development"
+  },
+  {
+    "id": 4,
+    "title": "Python for Beginners",
+    "instructor": "Emily Davis",
+    "duration": "12 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "This beginner-friendly Python course is perfect for anyone starting their programming journey. You will learn core concepts such as variables, data types, loops, conditionals, and functions in a simple and easy-to-understand way. The course also includes hands-on exercises and mini projects to help you practice what you learn. By the end, you will have a solid foundation in Python and be ready to explore advanced fields like data science, automation, or web development.",
+    "image": "https://images.unsplash.com/photo-1526378722484-bd91ca387e72",
+    "category": "Programming"
+  },
+  {
+    "id": 5,
+    "title": "Full-Stack MERN Project",
+    "instructor": "David Wilson",
+    "duration": "22 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Build a complete full-stack application using the MERN stack (MongoDB, Express, React, Node.js). This course focuses on real-world project development, including user authentication, CRUD operations, API integration, and deployment. You will learn how frontend and backend communicate in a real application and how to structure your project professionally. By the end of this course, you will have a fully functional project that you can showcase in your portfolio or use as a base for your own startup ideas.",
+    "image": "https://images.unsplash.com/photo-1504639725590-34d0984388bd",
+    "category": "Development"
+  },
+  {
+    "id": 6,
+    "title": "UI/UX Design Fundamentals",
+    "instructor": "Sophia Taylor",
+    "duration": "10 hours",
+    "rating": 4.4,
+    "level": "Beginner",
+    "description": "Learn the fundamentals of UI/UX design and create visually appealing and user-friendly interfaces. This course covers design principles, color theory, typography, wireframing, and prototyping. You will also learn how to think from a user's perspective and improve user experience. Using modern tools like Figma, you will design real-world projects that can be added to your portfolio. This course is ideal for beginners who want to enter the design field or improve their frontend design skills.",
+    "image": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e",
+    "category": "Design"
+  },
+  {
+    "id": 7,
+    "title": "JavaScript Deep Dive",
+    "instructor": "James Anderson",
+    "duration": "14 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Understand JavaScript at a deeper level by exploring advanced concepts such as closures, prototypes, scope, event loop, and asynchronous programming. This course is designed to strengthen your core knowledge and help you write more efficient and optimized code. Through practical examples and exercises, you will gain a clear understanding of how JavaScript works behind the scenes. This is perfect for developers who want to move from intermediate to advanced level.",
+    "image": "https://images.unsplash.com/photo-1505685296765-3a2736de412f",
+    "category": "Programming"
+  },
+  {
+    "id": 8,
+    "title": "Django Web Development",
+    "instructor": "Olivia Martinez",
+    "duration": "16 hours",
+    "rating": 4.6,
+    "level": "Intermediate",
+    "description": "Learn how to build secure and scalable web applications using the Django framework. This course covers models, views, templates, authentication, and database integration. You will build real-world projects and understand how Django simplifies backend development. The course also includes deployment and best practices to help you create production-ready applications.",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+    "category": "Development"
+  },
+  {
+    "id": 9,
+    "title": "Mobile App Development with Flutter",
+    "instructor": "Daniel Garcia",
+    "duration": "19 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Create beautiful and high-performance mobile applications using Flutter. This course teaches Dart programming, UI building, state management, and API integration. You will develop cross-platform apps that run on both Android and iOS from a single codebase. Through hands-on projects, you will gain the confidence to build and publish your own mobile applications.",
+    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c",
+    "category": "Mobile Development"
+  },
+  {
+    "id": 10,
+    "title": "Database Design & SQL",
+    "instructor": "Laura Hernandez",
+    "duration": "11 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Learn how to design efficient and scalable databases and write powerful SQL queries. This course covers normalization, relationships, joins, indexing, and performance optimization. You will work on real-world examples to understand how databases are used in applications. By the end, you will be able to design databases and write complex queries confidently.",
+    "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d",
+    "category": "Database"
+  }
+]
