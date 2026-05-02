@@ -31,6 +31,7 @@ const Signup = () => {
                     <label className="label">Password</label>
                     <input type="password" {...register("password", { required: true })} className="input" placeholder="Password" />
 
+
                     <button className="btn btn-neutral mt-4">Sign up</button>
                 </fieldset>
                 <hr className='mt-2' />
