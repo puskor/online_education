@@ -1,17 +1,30 @@
+"use client"
 import Link from 'next/link';
 import React from 'react';
 import Navlink from './Navlink';
+import { authClient, useSession } from '@/lib/auth-client';
 
 
 
 
 const Navbar = () => {
 
+
+    const { data: session, status } = useSession()
+    const user = session?.user;
+
+
+    console.log( user);
+
+
+
     const links =
         (<div className='space-x-4 text-[15px] font-bold md:flex'>
             <Navlink href={"/"}>Home</Navlink>
             <Navlink href={"/courses"}>Courses</Navlink>
-            <Navlink href={"/login"}>My Profile</Navlink>
+            {
+                user && <Navlink href={"/profile"}>My Profile</Navlink>
+            }
         </div>
         )
 
@@ -38,7 +51,10 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link href={"/login"} className="btn">Login</Link>
+                    {
+                        user ? (<button onClick={async () => await authClient.signOut()} className="btn">Logout</button> ): (<Link href={"/login"} className="btn">Login</Link>)
+                    }
+                    
                 </div>
             </div>
         </div>

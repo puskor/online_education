@@ -3,6 +3,7 @@ import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { FaFacebook, FaGithub, FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
 
@@ -12,15 +13,15 @@ const Login = () => {
     const HandleLoginFunction = async (data) => {
         console.log(data);
 
-        const {data:res , error} = await authClient.signIn.email({
+        const { data: res, error } = await authClient.signIn.email({
             email: data.email,
             password: data.password,
             remember: true,
-            callbackURL:"/"
+            callbackURL: "/"
         })
 
 
-        console.log(res, error ,"this is error show");
+        console.log(res, error, "this is error show");
 
 
 
@@ -40,6 +41,14 @@ const Login = () => {
                     <button className="btn btn-neutral mt-4">Login</button>
                 </fieldset>
             </form>
+            {/* <hr className='mt-2' /> */}
+            <h1 className='text-center text-xl text-gray-400'>or</h1>
+            <div className='flex items-center gap-4 justify-center text-xl text-gray-600'>
+                <FaGoogle />
+                <FaFacebook />
+                <FaGithub />
+            </div>
+            <hr className='mt-2' />
             <p className="mt-4">
                 Do not have an account?{" "}
                 <Link href={"/signup"} className="text-blue-500">

@@ -1,6 +1,15 @@
+"use client"
+import { useSession } from "@/lib/auth-client";
 import Link from "next/link";
 
 const Banner = () => {
+
+        const { data: session, status } = useSession()
+        const user = session?.user;
+    
+    
+    
+    
     return (
         <section className="bg-gradient-to-r from-blue-500 to-indigo-700 text-white">
             <div className="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-center gap-10">
@@ -22,11 +31,13 @@ const Banner = () => {
                             </button>
                         </Link>
 
-                        <Link href="/signup">
-                            <button className="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">
-                                Sign up
-                            </button>
-                        </Link>
+                        {user ? ("") : (
+                            <Link href="/signup">
+                                <button className="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">
+                                    Sign up
+                                </button>
+                            </Link>
+                        )}
                     </div>
                 </div>
 

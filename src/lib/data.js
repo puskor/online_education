@@ -1,4 +1,5 @@
 import data from "@/lib/data.json"
+import { auth } from "./auth";
 
 
 export const courses = async () => {
@@ -12,4 +13,7 @@ export const courseDetails = async (id) => {
     const course = data.find(item => item.id == id);
     return course;
 };
+
+
+
 
