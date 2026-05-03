@@ -19,6 +19,10 @@ const Signup = () => {
                 callbackURL:"/"
         })
 
+        if(error){
+            alert(error.message);
+        }
+
         console.log(res, error ,"this is error show");
     }
 

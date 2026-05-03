@@ -9,6 +9,9 @@ import { authClient, useSession } from '@/lib/auth-client';
 
 const Navbar = () => {
 
+    const logOut = async () => {
+        await authClient.signOut();
+    }
 
     const { data: session, status } = useSession()
     const user = session?.user;
@@ -52,8 +55,8 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     {
-                        user ? (<button onClick={async () => await authClient.signOut()} className="btn">Logout</button> ): (<Link href={"/login"} className="btn">Login</Link>)
-                    }
+                        user ? (<button onClick={logOut} className="btn">Logout</button> ): (<Link href={"/login"} className="btn">Login</Link>)
+                    }      
                     
                 </div>
             </div>
