@@ -15,5 +15,16 @@ export const courseDetails = async (id) => {
 };
 
 
+export const getTop3Courses = async () => {
+    const allCourses = await courses();
+
+    const top3 = allCourses
+        .sort((a, b) => b.rating - a.rating)
+        .slice(0, 3);
+
+    return top3;
+};
+
+
 
 
