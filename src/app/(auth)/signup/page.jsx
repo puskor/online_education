@@ -1,20 +1,31 @@
 "use client"
+import { authClient } from '@/lib/auth-client';
 import { useForm } from 'react-hook-form';
 import { FaFacebook, FaGithub, FaGoogle } from 'react-icons/fa';
 
 const Signup = () => {
     const { register, handleSubmit, watch, formState: { errors }, } = useForm()
 
-    const HandleLoginFunction = (data) => {
+    const HandelSighUpForm = async (data) => {
 
         console.log(data);
 
+        const {data:res,error} = await authClient.signUp.email({
+                email: data.email,
+                password: data.password,
+                name: data.name,
+                photo: data.photo,
+                remember: true,
+                callbackURL:"/"
+        })
+
+        console.log(res, error ,"this is error show");
     }
 
     return (
         <div className='bg-base-200 border-base-300 rounded-box w-xs border p-4 mx-auto mt-10'>
 
-            <form onSubmit={handleSubmit(HandleLoginFunction)}>
+            <form onSubmit={handleSubmit(HandelSighUpForm)}>
                 <fieldset className="fieldset ">
                     <legend className="fieldset-legend text-2xl">Sign up</legend>
 

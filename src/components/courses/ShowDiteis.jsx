@@ -5,7 +5,7 @@ const ShowDiteis = (data) => {
 
     const { id, image, title, description } = data.data;
     return (
-        <div className="card bg-base-100 w-96 shadow-sm container mx-auto mt-10">
+        <div className="card bg-base-100 w-[40%] shadow-sm container mx-auto mt-10">
             <figure>
                 <img src={image} alt={title} />
             </figure>
