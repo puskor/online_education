@@ -1,29 +1,40 @@
 "use client"
 import { authClient } from '@/lib/auth-client';
+import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { FaFacebook, FaGithub, FaGoogle } from 'react-icons/fa';
+
 
 const Signup = () => {
     const { register, handleSubmit, watch, formState: { errors }, } = useForm()
 
+    const router = useRouter();
     const HandelSighUpForm = async (data) => {
 
         console.log(data);
 
-        const {data:res,error} = await authClient.signUp.email({
-                email: data.email,
-                password: data.password,
-                name: data.name,
-                photo: data.photo,
-                remember: true,
-                callbackURL:"/"
+        const { data: res, error } = await authClient.signUp.email({
+            email: data.email,
+            password: data.password,
+            name: data.name,
+            photo: data.photo,
+            remember: true,
+            callbackURL: "/"
         })
+        console.log(res, error, "this is error show");
 
-        if(error){
+
+        if (error) {
             alert(error.message);
         }
 
-        console.log(res, error ,"this is error show");
+
+        if (res) {
+            
+            alert("Signin successful");
+            router.push("/");
+        }
+
     }
 
     return (

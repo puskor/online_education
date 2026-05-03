@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Logout = () => {
+const loading = () => {
     return (
         <div>
-            
+            this is loading page
         </div>
     );
 };
 
-export default Logout;
+export default loading;

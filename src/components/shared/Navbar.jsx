@@ -13,11 +13,12 @@ const Navbar = () => {
         await authClient.signOut();
     }
 
-    const { data: session, status } = useSession()
+    const { data: session, status } = authClient.useSession();
+
     const user = session?.user;
 
 
-    console.log( user);
+    // console.log( user,"this is user from navbar");
 
 
 

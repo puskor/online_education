@@ -1,10 +1,10 @@
 "use client"
-import { useSession } from "@/lib/auth-client";
+import { authClient, useSession } from "@/lib/auth-client";
 import Link from "next/link";
 
 const Banner = () => {
 
-        const { data: session, status } = useSession()
+        const { data: session, status } = authClient.useSession()
         const user = session?.user;
     
     

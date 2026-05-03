@@ -23,6 +23,15 @@ const Login = () => {
 
         console.log(res, error, "this is error show");
 
+        if (error) {
+            alert(error.message);
+        }
+
+
+        if (res) {
+            alert("Signin successful");
+        }
+
 
 
     }

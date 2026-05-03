@@ -3,7 +3,9 @@ import React from 'react';
 
 const ShowDiteis = (data) => {
 
+    // console.log(data, "this is data from show diteis");
     const { id, image, title, description } = data.data;
+    // console.log(id, "this is id from show diteis");
     return (
         <div className="card bg-base-100 w-[40%] shadow-sm container mx-auto mt-10">
             <figure>

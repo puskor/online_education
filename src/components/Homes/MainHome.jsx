@@ -5,7 +5,6 @@ import Banner from './Bannar';
 const MainHome = () => {
     return (
         <div>
-            {/* <Carousel/> */}
             <Banner/>
         </div>
     );

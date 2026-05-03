@@ -20,7 +20,7 @@ const CourseCard = ({ course }) => {
                     </p>
                 </div>
                 <div className="card-actions justify-end">
-                    <Link href={`/courses/${id}`}>
+                    <Link href={`/details/${id}`}>
                         <button className="btn btn-primary hover:btn-secondary">Details</button>
                     </Link>
                     <button className="btn btn-primary hover:btn-secondary">Inroll now</button>
