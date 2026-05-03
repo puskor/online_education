@@ -1,12 +1,12 @@
 "use client"
-import { useSession } from '@/lib/auth-client';
+import { authClient, useSession } from '@/lib/auth-client';
 import Link from 'next/link';
 import React from 'react';
 
 const ProfilePage = () => {
-    const { data: session, status } = useSession()
-    const user = session?.user;
 
+    const { data: session, status } = authClient.useSession()
+    const user = session?.user;
 
     console.log(user, "user from profile page");
 
@@ -18,8 +18,8 @@ const ProfilePage = () => {
 
                     {/* Header */}
                     <div className="flex flex-col items-center">
-                        <div className="w-20 h-20 rounded-full bg-indigo-500 flex items-center justify-center text-white text-2xl font-bold shadow-md">
-                            <img src={user.image} alt={user.name} />
+                        <div className="rounded-full bg-indigo-500 flex items-center  justify-center text-white text-2xl font-bold shadow-md">
+                            <img className='rounded-full w-20 h-20 p-1' src={user.image} alt={user.name} />
                         </div>
 
                         <h1 className="mt-3 text-xl font-semibold text-gray-800">
@@ -29,8 +29,8 @@ const ProfilePage = () => {
 
                         <span
                             className={`mt-2 text-xs px-3 py-1 rounded-full ${user.emailVerified
-                                    ? "bg-green-100 text-green-600"
-                                    : "bg-red-100 text-red-500"
+                                ? "bg-green-100 text-green-600"
+                                : "bg-red-100 text-red-500"
                                 }`}
                         >
                             {user.emailVerified ? "Verified" : "Not Verified"}
@@ -67,7 +67,7 @@ const ProfilePage = () => {
                         <button className="w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2 rounded-xl transition">
                             Edit Profile
                         </button>
-                
+
                     </div>
 
                 </div>

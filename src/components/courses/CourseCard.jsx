@@ -23,7 +23,10 @@ const CourseCard = ({ course }) => {
                     <Link href={`/details/${id}`}>
                         <button className="btn btn-primary hover:btn-secondary">Details</button>
                     </Link>
-                    <button className="btn btn-primary hover:btn-secondary">Inroll now</button>
+                    <Link href={'/signup'}>
+                        <button className="btn btn-primary hover:btn-secondary">Inroll now</button>
+
+                    </Link>
                 </div>
             </div>
         </div>

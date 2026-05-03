@@ -1,25 +1,61 @@
 import Link from 'next/link';
 import React from 'react';
 
-const ShowDiteis = (data) => {
+const ShowDiteis = ({ data }) => {
 
-    // console.log(data, "this is data from show diteis");
-    const { id, image, title, description } = data.data;
-    // console.log(id, "this is id from show diteis");
+    const {
+        id,
+        image,
+        title,
+        description,
+        instructor,
+        duration,
+        level,
+        rating,
+        category
+    } = data;
+
     return (
-        <div className="card bg-base-100 w-[40%] shadow-sm container mx-auto mt-10">
+        <div className="card bg-base-100 max-w-3xl shadow-lg mx-auto mt-10">
+            
+            {/* Image */}
             <figure>
-                <img src={image} alt={title} />
+                <img src={image} alt={title} className="w-full h-[300px] object-cover" />
             </figure>
-            <div className="card-body">
-                <h2 className="card-title">{title}</h2>
-                <p>{description}</p>
-                <div className="card-actions justify-end">
-                    <Link href={`/courses`}>
-                        <button className="btn btn-primary hover:btn-secondary">Cancel</button>
-                    </Link>
-                    <button className="btn btn-primary hover:btn-secondary">Inroll now</button>
 
+            {/* Body */}
+            <div className="card-body space-y-3">
+
+                <span className="text-sm text-blue-600 font-semibold">
+                    {category}
+                </span>
+
+                <h2 className="card-title text-2xl">{title}</h2>
+
+                {/* Rating */}
+                <p className="text-yellow-500 font-medium">
+                    ⭐ {rating}
+                </p>
+
+                {/* Info */}
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm text-gray-800">
+                    <p><span className="font-semibold">Instructor:</span> {instructor}</p>
+                    <p><span className="font-semibold">Duration:</span> {duration}</p>
+                    <p><span className="font-semibold">Level:</span> {level}</p>
+                    <p><span className="font-semibold">Course ID:</span> #{id}</p>
+                </div>
+
+                {/* Description */}
+                <p className="text-gray-600">{description}</p>
+
+                {/* Buttons */}
+                <div className="card-actions justify-end mt-4">
+                    <Link href={`/courses`}>
+                        <button className="btn btn-outline">Cancel</button>
+                    </Link>
+                    <button className="btn btn-primary">
+                        Enroll Now
+                    </button>
                 </div>
             </div>
         </div>
