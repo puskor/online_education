@@ -71,7 +71,7 @@ const Signup = () => {
                 <hr className='mt-2' />
                 <h1 className='text-center text-xl text-gray-400'>or</h1>
                 <div className='flex items-center gap-4 justify-center text-xl text-gray-600'>
-                    <button onClick={handelGoogleSignUp}>
+                    <button className='hover:border hover:rounded-full' onClick={handelGoogleSignUp}>
                         <FaGoogle />
                     </button>
                     <FaFacebook />
