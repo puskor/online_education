@@ -10,6 +10,11 @@ const Login = () => {
     const { register, handleSubmit, watch, formState: { errors }, } = useForm()
 
 
+    const HandelLoginByGoogle = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+    }
     const HandleLoginFunction = async (data) => {
         console.log(data);
 
@@ -27,13 +32,9 @@ const Login = () => {
             alert(error.message);
         }
 
-
         if (res) {
             alert("Signin successful");
         }
-
-
-
     }
     return (
         <div className=' bg-base-200 border-base-300 rounded-box w-xs border p-4 mx-auto mt-10'>
@@ -53,7 +54,9 @@ const Login = () => {
             {/* <hr className='mt-2' /> */}
             <h1 className='text-center text-xl text-gray-400'>or</h1>
             <div className='flex items-center gap-4 justify-center text-xl text-gray-600'>
-                <FaGoogle />
+                <button onClick={HandelLoginByGoogle}>
+                    <FaGoogle />
+                </button>
                 <FaFacebook />
                 <FaGithub />
             </div>

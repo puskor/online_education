@@ -1,5 +1,4 @@
 import React from 'react';
-import Carousel from './Carousel';
 import Banner from './Bannar';
 import Top3 from './Top3';
 

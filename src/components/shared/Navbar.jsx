@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import Navlink from './Navlink';
 import { authClient, useSession } from '@/lib/auth-client';
+import SearchInput from '@/app/(main)/search/SearchInput';
 
 
 
@@ -54,11 +55,14 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
+
+                
                 <div className="navbar-end">
-                    {
-                        user ? (<button onClick={logOut} className="btn">Logout</button> ): (<Link href={"/login"} className="btn">Login</Link>)
-                    }      
                     
+                    {
+                        user ? (<button onClick={logOut} className="btn">Logout</button>) : (<Link href={"/login"} className="btn">Login</Link>)
+                    }
+
                 </div>
             </div>
         </div>

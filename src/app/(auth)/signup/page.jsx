@@ -8,6 +8,14 @@ import { FaFacebook, FaGithub, FaGoogle } from 'react-icons/fa';
 const Signup = () => {
     const { register, handleSubmit, watch, formState: { errors }, } = useForm()
 
+
+    const handelGoogleSignUp = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+        
+    }
+
     const router = useRouter();
     const HandelSighUpForm = async (data) => {
 
@@ -30,7 +38,7 @@ const Signup = () => {
 
 
         if (res) {
-            
+
             alert("Signin successful");
             router.push("/");
         }
@@ -63,7 +71,9 @@ const Signup = () => {
                 <hr className='mt-2' />
                 <h1 className='text-center text-xl text-gray-400'>or</h1>
                 <div className='flex items-center gap-4 justify-center text-xl text-gray-600'>
-                    <FaGoogle />
+                    <button onClick={handelGoogleSignUp}>
+                        <FaGoogle />
+                    </button>
                     <FaFacebook />
                     <FaGithub />
                 </div>

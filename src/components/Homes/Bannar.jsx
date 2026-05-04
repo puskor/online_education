@@ -1,4 +1,5 @@
 "use client"
+import SearchInput from "@/app/(main)/search/SearchInput";
 import { authClient, useSession } from "@/lib/auth-client";
 import Link from "next/link";
 
@@ -12,6 +13,7 @@ const Banner = () => {
     
     return (
         <section className="bg-gradient-to-r from-blue-500 to-indigo-700 text-white">
+            <SearchInput/>
             <div className="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-center gap-10">
 
                 {/* Left Content */}

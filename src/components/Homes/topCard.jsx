@@ -17,7 +17,7 @@ const TopCard = ({ item }) => {
 
             <div className="p-4 space-y-2">
 
-                <h2 className="text-lg font-semibold text-gray-800">
+                <h2 className="text-lg font-semibold text-gray-800 line-clamp-1">
                     {title}
                 </h2>
 
