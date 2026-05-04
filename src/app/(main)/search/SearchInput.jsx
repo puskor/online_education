@@ -11,7 +11,8 @@ export default function SearchInput() {
 
     const handleSearch = (e) => {
         e.preventDefault();
-        router.push(`/search/${search}`);
+        search.length >= 1 && router.push(`/search/${search}`);
+
     };
 
     return (
